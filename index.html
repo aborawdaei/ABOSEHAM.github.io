@@ -1,49 +1,131 @@
-
 <!DOCTYPE html>
-<html dir="rtl" lang="ar">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>موقع أبو سهام</title>
+    <title>موقع أبو سهام | مجدي</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <style>
+        /* إعدادات الخطوط والألوان الأساسية */
         body {
-            font-family: Tahoma, sans-serif;
-            background-color: #0a192f; /* خلفية كحلي غامق جداً */
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0f172a; /* لون الخلفية الكحلي الغامق */
+            color: #e2e8f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        /* تنسيق البطاقة */
+        .card {
+            background-color: #1e293b; /* لون البطاقة أفتح قليلاً */
+            padding: 40px 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
             text-align: center;
-            padding: 20px;
-            color: #e6f1ff; /* لون الكتابة أبيض فاتح */
+            max-width: 400px;
+            width: 90%;
+            border: 1px solid #334155;
         }
-        .container {
-            background: #112240; /* لون الكارت كحلي أفتح سنة */
-            max-width: 600px;
-            margin: 50px auto;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px -10px rgba(2,12,27,0.7); /* ظل أسود للفخامة */
-            border: 1px solid #233554; /* برواز خفيف */
+
+        /* النصوص */
+        h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: #ffffff;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
-        h1 { color: #ffffff; margin-bottom: 10px; text-shadow: 2px 2px 4px #000; }
-        p { font-size: 18px; color: #a8b2d1; line-height: 1.6; }
+
+        h2 {
+            font-size: 22px;
+            color: #cbd5e1;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #94a3b8;
+            margin-bottom: 30px;
+        }
+
+        /* زر التواصل */
         .btn {
-            background-color: #64ffda; /* زر بلون مميز (تركواز) */
-            color: #0a192f;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
             display: inline-block;
-            margin-top: 20px;
+            background-color: #2dd4bf; /* اللون التركواز */
+            color: #0f172a;
+            padding: 12px 35px;
+            font-size: 18px;
             font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: transform 0.2s, background-color 0.2s;
+            margin-bottom: 25px;
+        }
+
+        .btn:hover {
+            background-color: #14b8a6;
+            transform: scale(1.05);
+        }
+
+        /* أيقونات التواصل الاجتماعي */
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            color: #94a3b8;
+            font-size: 24px;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #2dd4bf; /* تتلون عند الوقوف عليها */
+        }
+
+        /* التذييل السفلي */
+        .footer {
+            margin-top: 30px;
+            font-size: 12px;
+            color: #64748b;
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>مرحباً بكم في موقع أبو سهام</h1>
-        <p>أنا مجدي، وهذا موقعي الشخصي من المنصورة الجديدة.</p>
-        <p>تم تحديث الموقع إلى الوضع الليلي الفخم.</p>
-        <br>
-        <a href="#" class="btn">تواصل معي</a>
+    <div class="card">
+        <h1>مرحباً بكم في موقع</h1>
+        <h2>أبو سهام</h2>
+        
+        <p>
+            أنا مجدي، وهذا موقعي الشخصي من
+            <br>
+            المنصورة الجديدة.
+            <br><br>
+            نسعد بتواجدكم وتواصلكم معنا دائماً.
+        </p>
+
+        <a href="https://wa.me/201xxxxxxxxx" class="btn" target="_blank">
+            <i class="fab fa-whatsapp"></i> تواصل معي واتساب
+        </a>
+
+        <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="mailto:email@example.com"><i class="fas fa-envelope"></i></a>
+        </div>
+    </div>
+
+    <div class="footer">
+        جميع الحقوق محفوظة © أبو سهام 2025
     </div>
 
 </body>
