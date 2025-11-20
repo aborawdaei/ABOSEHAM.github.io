@@ -3,131 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>موقع أبو سهام | مجدي</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>تواصل معي - مجدي</title>
     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
-        /* إعدادات الخطوط والألوان الأساسية */
         body {
-            margin: 0;
-            padding: 0;
+            background-color: #0f172a; /* لون الخلفية الغامق */
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #0f172a; /* لون الخلفية الكحلي الغامق */
-            color: #e2e8f0;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
-            flex-direction: column;
+            height: 100vh;
+            margin: 0;
         }
 
-        /* تنسيق البطاقة */
-        .card {
-            background-color: #1e293b; /* لون البطاقة أفتح قليلاً */
-            padding: 40px 20px;
-            border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+        /* الحاوية الحاملة للأزرار */
+        .social-card {
             text-align: center;
-            max-width: 400px;
-            width: 90%;
-            border: 1px solid #334155;
+            padding: 30px;
+            border: 2px solid #1e293b;
+            border-radius: 20px;
+            background-color: #1e293b;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
         }
 
-        /* النصوص */
-        h1 {
-            font-size: 28px;
-            margin-bottom: 10px;
-            color: #ffffff;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-        }
-
-        h2 {
-            font-size: 22px;
-            color: #cbd5e1;
-            margin-bottom: 20px;
-        }
-
-        p {
-            font-size: 16px;
-            line-height: 1.6;
-            color: #94a3b8;
-            margin-bottom: 30px;
-        }
-
-        /* زر التواصل */
-        .btn {
-            display: inline-block;
-            background-color: #2dd4bf; /* اللون التركواز */
-            color: #0f172a;
-            padding: 12px 35px;
-            font-size: 18px;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 8px;
-            transition: transform 0.2s, background-color 0.2s;
+        .social-title {
+            color: #fff;
             margin-bottom: 25px;
+            font-size: 20px;
         }
 
-        .btn:hover {
-            background-color: #14b8a6;
-            transform: scale(1.05);
+        .icons-container {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
         }
-        <a href="https://wa.me/201007411385" class="btn" target="_blank">
-            <i class="fab fa-whatsapp"></i> تواصل معي واتساب
-        </a>
-ض
-        /* أيقونات التواصل الاجتماعي */
-        .social-icons {
+
+        /* تصميم الزر الموحد */
+        .btn-social {
             display: flex;
             justify-content: center;
-            gap: 20px;
-            margin-top: 10px;
+            align-items: center;
+            width: 60px;
+            height: 60px;
+            text-decoration: none;
+            border-radius: 50%;
+            font-size: 28px;
+            color: white;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            background-color: #334155; /* لون موحد في البداية */
+            position: relative;
         }
 
-        .social-icons a {
-            color: #94a3b8;
-            font-size: 24px;
-            transition: color 0.3s;
+        /* ألوان وتأثيرات خاصة لكل زر */
+        
+        /* واتساب */
+        .btn-social.whatsapp:hover {
+            background-color: #25D366;
+            transform: scale(1.2) rotate(-10deg);
         }
 
-        .social-icons a:hover {
-            color: #2dd4bf; /* تتلون عند الوقوف عليها */
+        /* هاتف */
+        .btn-social.phone:hover {
+            background-color: #0ea5e9;
+            transform: scale(1.2);
         }
 
-        /* التذييل السفلي */
-        .footer {
-            margin-top: 30px;
-            font-size: 12px;
-            color: #64748b;
+        /* فيسبوك */
+        .btn-social.facebook:hover {
+            background-color: #1877F2;
+            transform: scale(1.2) rotate(10deg);
         }
+
+        /* انستجرام */
+        .btn-social.instagram:hover {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            transform: scale(1.2);
+        }
+
+        /* بريد إلكتروني */
+        .btn-social.email:hover {
+            background-color: #ea4335;
+            transform: scale(1.2);
+        }
+
     </style>
 </head>
 <body>
 
-    <div class="card">
-        <h1>مرحباً بكم في موقع</h1>
-        <h2>أبو سهام</h2>
+    <div class="social-card">
+        <h2 class="social-title">تواصل معي</h2>
         
-        <p>
-            أنا مجدي، وهذا موقعي الشخصي من
-            <br>
-            المنصورة الجديدة.
-            <br><br>
-            نسعد بتواجدكم وتواصلكم معنا دائماً.
-        </p>
+        <div class="icons-container">
+            <a href="https://wa.me/201007411385" target="_blank" class="btn-social whatsapp" title="واتساب">
+                <i class="fab fa-whatsapp"></i>
+            </a>
 
-    
-        </a>
+            <a href="tel:+201007411385" class="btn-social phone" title="اتصال هاتفي">
+                <i class="fas fa-phone-alt"></i>
+            </a>
 
-        <div class="social-icons">
-            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
-            <a href="mailto:email@example.com"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.facebook.com" target="_blank" class="btn-social facebook" title="فيسبوك">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+
+            <a href="https://www.instagram.com" target="_blank" class="btn-social instagram" title="انستجرام">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="mailto:" class="btn-social email" title="البريد الإلكتروني">
+                <i class="fas fa-envelope"></i>
+            </a>
         </div>
-    </div>
-
-    <div class="footer">
-        جميع الحقوق محفوظة © أبو سهام 2025
     </div>
 
 </body>
