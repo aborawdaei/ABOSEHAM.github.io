@@ -49,6 +49,16 @@
             color: #a3e635;
             margin-bottom: 20px;
         }
+        
+        /* تنسيق المشغل الصوتي */
+        .audio-player-container {
+            margin: 20px 0; 
+            padding: 0 10px;
+        }
+        .audio-player-container audio {
+            width: 100%;
+        }
+
 
         .profile-img {
             width: 130px;
@@ -114,8 +124,8 @@
         }
 
         .product-card {
-            background-color: #334155; /* تم تغييرها من الأبيض */
-            color: white; /* تم تغييرها من الأسود */
+            background-color: #334155;
+            color: white;
             border-radius: 10px;
             padding: 10px;
             text-align: center;
@@ -133,7 +143,7 @@
             font-size: 12px;
         }
         .product-card i {
-            color: #94a3b8; /* تم تغيير لون الأيقونة لتظهر بشكل جيد على الخلفية الداكنة */
+            color: #94a3b8;
         }
 
         /* 5. زر الدعم والتواصل */
@@ -178,7 +188,14 @@
                 وقل اعملوا فسيرى الله عملكم ورسوله والمؤمنون
             </div>
             
-            <img src="1.jpg" alt="مجدي" class="profile-img">
+            <div class="audio-player-container">
+                 <audio controls>
+                    <source src="sound.m4a" type="audio/mp4">
+                    متصفحك لا يدعم تشغيل الملف الصوتي.
+                </audio>
+            </div>
+            
+            <img src="FotorCreated-001.jpg" alt="مجدي" class="profile-img">
             
             <h2>أ/ مجدي</h2>
             
