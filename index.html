@@ -19,14 +19,14 @@
             text-align: center; 
             margin: 0;
             padding: 20px;
-            color: #303030; /* لون نص بني غامق */
+            color: #303030;
         }
         .container {
             max-width: 1000px;
             margin: 0 auto;
         }
         .header {
-            background-color: #FFFFFF; /* خلفية بيضاء للهيدر */
+            background-color: #FFFFFF;
             padding: 20px;
             margin-bottom: 30px;
             border-radius: 10px;
@@ -40,13 +40,13 @@
         .quran-text {
             font-family: 'Amiri', serif; 
             font-size: 1.4em;
-            color: #1E8449; /* أخضر غامق */
+            color: #1E8449;
             margin-top: 15px;
             padding: 10px;
             border: 2px solid #1E8449;
             border-radius: 5px;
             display: inline-block;
-            background-color: #F0FFF0; /* خلفية خفيفة جداً للآية */
+            background-color: #F0FFF0;
         }
         .profile-section {
             background-color: #FFFFFF;
@@ -60,9 +60,15 @@
             height: 180px;
             border-radius: 50%; 
             object-fit: cover; 
-            border: 6px solid #C3C7A8; /* إطار بنفس لون الخلفية */
+            border: 6px solid #C3C7A8;
             box-shadow: 0 0 15px rgba(0,0,0,0.3);
             margin-bottom: 20px;
+        }
+        .dedication {
+            font-size: 1.1em;
+            color: #795548; /* لون بني للإهداء */
+            margin-bottom: 20px;
+            font-weight: 600;
         }
         /* تنسيق أيقونات التواصل الاجتماعي */
         .social-icons {
@@ -75,10 +81,8 @@
             transition: color 0.3s;
         }
         .social-icons a:hover {
-            color: #1E8449; /* تغيير اللون إلى الأخضر الداكن */
+            color: #1E8449;
         }
-
-        /* تنسيق قسم الصوت والصور والمنتجات */
         .content-section {
             background-color: #FFFFFF;
             padding: 30px 20px;
@@ -107,7 +111,7 @@
         }
         .product-item a {
             display: block;
-            background-color: #1E8449; /* لون زر أخضر داكن */
+            background-color: #1E8449;
             color: white;
             padding: 10px 15px;
             text-decoration: none;
@@ -117,7 +121,7 @@
             transition: background-color 0.3s;
         }
         .product-item a:hover {
-            background-color: #156535; /* لون أغمق عند المرور */
+            background-color: #156535;
         }
         
         .footer {
@@ -148,7 +152,9 @@
         <div class="profile-section">
             <h2>أهلاً وسهلاً بك في صفحتي الشخصية!</h2>
             
-            <img src="Downloadfile.jeg" alt="صورتي الشخصية" class="profile-image">
+            <p class="dedication">**إهداء خاص إلى عمر.**</p>
+            
+            <img src="Downloadfile.jpeg" alt="صورتي الشخصية" class="profile-image">
             
             <p>مرحباً بكم. هذه نبذة بسيطة عني وعن بعض الملفات.</p>
             
@@ -162,7 +168,7 @@
         <div class="content-section">
             <h3>تشغيل الملف الصوتي</h3>
             <audio controls>
-                <source src="الصوت.m4a" type="audio/mp4">
+                <source src="Sound.m4a" type="audio/mp4">
                 متصفحك لا يدعم وسم الصوت.
             </audio>
         </div>
@@ -185,7 +191,7 @@
                     <img src="FotorCreated-001.jpg" alt="صورة تم إنشاؤها بـ Fotor" style="max-width:100%; height:auto; border-radius: 5px;">
                     <p>ملف JPG</p>
                 </div>
-                </div>
+            </div>
         </div>
         
         <div class="products-section content-section">
