@@ -3,181 +3,173 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>موقع مجدي الرسمي</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Cairo:wght@400;700&display=swap" rel="stylesheet">
-
+    <title>موقع الأستاذ مجدي</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <style>
+        /* إعدادات الألوان المبهجة (بيج وتيفاني) */
+        :root {
+            --bg-color: #fdfbf7;       /* بيج فاتح */
+            --card-bg: #ffffff;        /* أبيض */
+            --text-main: #333333;      /* رصاصي غامق */
+            --tiffany: #1abc9c;        /* تيفاني */
+            --gold: #d4ac0d;           /* ذهبي */
+        }
+
         body {
-            background-color: #0f172a;
-            font-family: 'Cairo', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Tajawal', sans-serif;
             margin: 0;
-            padding: 20px;
-            color: white;
-        }
-        .main-container {
-            max-width: 500px;
-            margin: 0 auto;
-            background-color: #1e293b;
-            border-radius: 20px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.5);
-            overflow: hidden;
-            border: 1px solid #334155;
-        }
-        .header-section {
-            padding: 30px 20px;
+            padding: 0;
             text-align: center;
-            background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
-            border-bottom: 1px solid #334155;
         }
-        .basmalah {
-            font-family: 'Amiri', serif;
-            font-size: 24px;
-            color: #fbbf24;
-            margin-bottom: 15px;
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
         }
-        .profile-img {
+
+        /* الهيدر والصورة الشخصية */
+        header { padding: 20px 0; }
+        .basmala { color: var(--gold); font-size: 1.2em; font-weight: bold; margin-bottom: 15px; }
+        
+        .profile-pic {
             width: 130px;
             height: 130px;
             border-radius: 50%;
-            border: 4px solid #38bdf8;
+            border: 4px solid var(--tiffany);
             object-fit: cover;
-            margin-bottom: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
-        .dedication-box {
-            background-color: rgba(255,255,255,0.05);
-            border: 1px dashed #475569;
-            border-radius: 10px;
+        
+        h1 { margin: 10px 0; color: var(--text-main); }
+
+        /* الإهداء */
+        .dedication {
+            background: #e0f7fa;
+            color: #00695c;
             padding: 10px;
-            margin: 15px 0;
-            font-size: 14px;
-            color: #94a3b8;
+            border-radius: 10px;
+            margin: 20px 0;
+            font-size: 0.9em;
+            border-right: 4px solid var(--tiffany);
         }
-        .audio-wrapper {
-            margin-top: 15px;
-            padding: 15px;
-            background-color: rgba(0,0,0,0.3);
+
+        /* مشغل الصوت */
+        audio { width: 100%; border-radius: 20px; margin-bottom: 20px; }
+
+        /* العناوين */
+        h3 { color: var(--tiffany); border-bottom: 2px solid #eee; padding-bottom: 10px; display: inline-block; }
+
+        /* معرض الصور */
+        .gallery {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            overflow-x: auto;
+            padding-bottom: 10px;
+        }
+        .gallery img {
+            width: 110px;
+            height: 110px;
+            border-radius: 10px;
+            object-fit: cover;
+            border: 2px solid white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .gallery img:hover { transform: scale(1.05); }
+
+        /* الكروت والأزرار */
+        .card {
+            background: var(--card-bg);
             border-radius: 15px;
-            border: 1px solid #334155;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            border: 1px solid #eee;
         }
-        audio { width: 100%; height: 40px; border-radius: 20px; margin-top: 5px;}
-        .section-title {
-            text-align: center; margin: 30px 0 15px 0; font-size: 18px; color: #38bdf8;
-            position: relative; display: inline-block; width: 100%;
-        }
-        .gallery-grid {
-            padding: 0 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px;
-        }
-        .gallery-img {
-            width: 100%; height: 100px; object-fit: cover; border-radius: 8px;
-            border: 1px solid #475569; transition: transform 0.3s; cursor: pointer;
-        }
-        .gallery-img:hover { transform: scale(1.1); border-color: #fbbf24; }
-        .services-grid { padding: 0 20px; display: flex; flex-direction: column; gap: 15px; }
-        .service-card {
-            background-color: #334155; padding: 15px; border-radius: 12px; display: flex;
-            align-items: center; gap: 15px; transition: transform 0.2s; cursor: pointer;
-        }
-        .service-card:hover { transform: scale(1.02); background-color: #475569; }
-        .service-icon { font-size: 24px; color: #fbbf24; }
-        .service-info h3 { margin: 0; font-size: 16px; }
-        .service-info p { margin: 5px 0 0; font-size: 12px; color: #cbd5e1; }
-        .products-grid { padding: 0 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-        .product-card {
-            background-color: #fff; color: #333; border-radius: 10px; padding: 10px; text-align: center;
-        }
-        .product-card h4 { margin: 10px 0 5px; font-size: 14px; }
-        .product-price { color: #ea4335; font-weight: bold; font-size: 14px; }
+        
         .buy-btn {
-            display: block; background-color: #ea4335; color: white; text-decoration: none;
-            padding: 5px; border-radius: 5px; margin-top: 5px; font-size: 12px;
+            background-color: var(--gold);
+            color: #fff;
+            padding: 8px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+            font-weight: bold;
         }
-        .support-section { padding: 30px 20px; text-align: center; }
-        .donate-btn {
-            background-color: #22c55e; color: white; text-decoration: none; padding: 10px 25px;
-            border-radius: 25px; font-weight: bold; display: inline-block; margin-bottom: 20px;
-            box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4);
+
+        .footer-btn {
+            background-color: var(--tiffany);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
         }
-        .icons-container { display: flex; justify-content: center; gap: 15px; margin-top: 10px; }
-        .social-link { color: #94a3b8; font-size: 24px; transition: color 0.3s; }
-        .social-link:hover { color: white; }
     </style>
 </head>
 <body>
 
-    <div class="main-container">
-        <div class="header-section">
-            <div class="basmalah">بسم الله الرحمن الرحيم</div>
-            <img src="downloadfile.jpeg" alt="مجدي" class="profile-img">
-            <h2>أ/ مجدي</h2>
-            <div class="dedication-box">
-                إهداء خاص إلى حفيدي الغالي <span style="color:#38bdf8">"عمر"</span><br>
-                حفظه الله ورعاه
+    <div class="container">
+        <div class="basmala">بسم الله الرحمن الرحيم</div>
+
+        <img src="1763690760422.jpeg" alt="أستاذ مجدي" class="profile-pic">
+        
+        <h1>أ/ مجدي</h1>
+        <p style="color: #777; margin-top: -5px;">مصمم جرافيك ومبدع بالذكاء الاصطناعي</p>
+
+        <div class="dedication">
+            <i class="fas fa-heart" style="color: red;"></i> 
+            إهداء خاص إلى حفيدي الغالي "عمر"
+        </div>
+
+        <audio controls>
+            <source src="Sound.m4a" type="audio/mp4">
+            متصفحك لا يدعم تشغيل الصوت.
+        </audio>
+
+        <h3>من أعمالي</h3>
+        <div class="gallery">
+            <img src="599b15b4-a0f1-4378-a7f3-0366fc481be0.jpg" alt="تصميم سينمائي">
+            <img src="a556afc7-8a8a-4ec6-8df2-c6633e108a26.jpg" alt="تصميم طبيعي">
+            <img src="4854.jpg" alt="تصميم شخصي">
+        </div>
+
+        <h3>خدماتي</h3>
+        <div class="card">
+            <i class="fas fa-magic" style="color: var(--tiffany); font-size: 2em; margin-bottom: 10px;"></i>
+            <h4>تصميم صور احترافية</h4>
+            <p style="color: #666; font-size: 0.9em;">أقوم بتحويل أفكارك إلى صور فنية مذهلة باستخدام الذكاء الاصطناعي</p>
+        </div>
+
+        <h3>منتجات أنصح بها</h3>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+            <div class="card">
+                <i class="fas fa-tv" style="font-size: 2em; color: #333;"></i>
+                <h4>شاشة سمارت</h4>
+                <a href="https://www.amazon.eg/s?k=smart+tv+32" target="_blank" class="buy-btn">شاهد السعر</a>
             </div>
-            
-            <div class="audio-wrapper">
-                <p style="margin:0 0 5px; font-size:12px; color:#cbd5e1;">🎧 استمع الآن (What is Love)</p>
-                <audio controls>
-                    <source src="sound.m4a" type="audio/mp4">
-                    Your browser does not support the audio element.
-                </audio>
+            <div class="card">
+                <i class="fas fa-mobile-alt" style="font-size: 2em; color: #333;"></i>
+                <h4>هاتف ذكي</h4>
+                <a href="https://www.amazon.eg/s?k=mobile+phone" target="_blank" class="buy-btn">شاهد السعر</a>
             </div>
         </div>
 
-        <div class="section-title">- من أعمالي -</div>
-        <div class="gallery-grid">
-            <img src="downloadfile.jpeg" class="gallery-img" alt="عمل 1">
-            <img src="downloadfile.jpeg" class="gallery-img" alt="عمل 2">
-            <img src="downloadfile.jpeg" class="gallery-img" alt="عمل 3">
-        </div>
+        <a href="#" class="footer-btn">
+            <i class="fas fa-mug-hot"></i> ادعمني بفنجان قهوة
+        </a>
 
-        <div class="section-title">- خدماتي -</div>
-        <div class="services-grid">
-            <div class="service-card" onclick="window.open('https://wa.me/201007411385?text=اريد_خدمة_تصميم_صور', '_blank')">
-                <i class="fas fa-paint-brush service-icon"></i>
-                <div class="service-info">
-                    <h3>تصميم صور بالذكاء الاصطناعي</h3>
-                    <p>أقوم بتوليد وتعديل الصور باحترافية حسب طلبك.</p>
-                </div>
-            </div>
-            <div class="service-card" onclick="window.open('https://wa.me/201007411385?text=استشارة', '_blank')">
-                <i class="fas fa-lightbulb service-icon"></i>
-                <div class="service-info">
-                    <h3>استشارات فنية</h3>
-                    <p>تواصل معي لأي استفسار تقني.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="section-title">- منتجات أنصح بها -</div>
-        <div class="products-grid">
-            <div class="product-card">
-                <i class="fas fa-tv" style="font-size:30px; color:#333;"></i>
-                <h4>شاشة سمارت 43 بوصة</h4>
-                <div class="product-price">7,000 EGP</div>
-                <a href="#" class="buy-btn">اشترِ الآن</a>
-            </div>
-            <div class="product-card">
-                <i class="fas fa-mobile-alt" style="font-size:30px; color:#333;"></i>
-                <h4>هاتف ذكي حديث</h4>
-                <div class="product-price">خصم خاص</div>
-                <a href="#" class="buy-btn">تفاصيل العرض</a>
-            </div>
-        </div>
-
-        <div class="support-section">
-            <a href="#" class="donate-btn">
-                <i class="fas fa-coffee"></i> ادعمني بفنجان قهوة
-            </a>
-            <div style="border-top: 1px solid #334155; margin: 15px 0;"></div>
-            <div class="icons-container">
-                <a href="https://wa.me/201007411385" class="social-link"><i class="fab fa-whatsapp"></i></a>
-                <a href="tel:+201007411385" class="social-link"><i class="fas fa-phone"></i></a>
-                <a href="https://facebook.com" class="social-link"><i class="fab fa-facebook"></i></a>
-                <a href="mailto:email@example.com" class="social-link"><i class="fas fa-envelope"></i></a>
-            </div>
-            <p style="font-size:12px; color:#64748b; margin-top:15px;">جميع الحقوق محفوظة © 2025</p>
-        </div>
+        <br><br>
+        <div style="color: #ccc; font-size: 0.8em;">جميع الحقوق محفوظة © 2025</div>
     </div>
+
 </body>
 </html>
