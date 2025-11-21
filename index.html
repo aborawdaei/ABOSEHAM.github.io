@@ -1,230 +1,91 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>صفحتي الشخصية المتكاملة</title>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>صفحة التقديم الصوتي للصحفي</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     
     <style>
-        /* استيراد خط عربي تقليدي للآية */
-        @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap');
-        
+        /* التنسيقات الأساسية لتنظيم الصفحة */
         body {
-            /* اللون الزيتوني للخلفية */
-            background-color: #C3C7A8; 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            direction: rtl; 
-            text-align: center; 
-            margin: 0;
-            padding: 20px;
-            color: #303030;
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+            padding-top: 50px;
         }
         .container {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        .header {
-            background-color: #FFFFFF;
-            padding: 20px;
-            margin-bottom: 30px;
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        .header h1 {
-            color: #303030;
-            margin-bottom: 10px;
-        }
-        /* تنسيق الآية القرآنية */
-        .quran-text {
-            font-family: 'Amiri', serif; 
-            font-size: 1.4em;
-            color: #1E8449;
-            margin-top: 15px;
-            padding: 10px;
-            border: 2px solid #1E8449;
-            border-radius: 5px;
-            display: inline-block;
-            background-color: #F0FFF0;
-        }
-        .profile-section {
-            background-color: #FFFFFF;
-            padding: 30px 20px;
-            border-radius: 10px;
-            margin-bottom: 30px;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-        }
-        .profile-image {
-            width: 180px; 
-            height: 180px;
-            border-radius: 50%; 
-            object-fit: cover; 
-            border: 6px solid #C3C7A8;
-            box-shadow: 0 0 15px rgba(0,0,0,0.3);
+        h1 {
+            color: #007bff;
             margin-bottom: 20px;
         }
-        .dedication {
-            font-size: 1.1em;
-            color: #795548; /* لون بني للإهداء */
-            margin-bottom: 20px;
-            font-weight: 600;
+        .bismillah {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+            color: #4CAF50; /* لون أخضر للبسملة */
         }
-        /* تنسيق أيقونات التواصل الاجتماعي */
-        .social-icons {
-            margin-top: 25px;
+        .profile-img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%; /* لجعل الصورة دائرية */
+            object-fit: cover;
+            border: 5px solid #007bff;
+            margin-bottom: 30px;
+        }
+        audio {
+            width: 100%;
+            margin-bottom: 30px;
         }
         .social-icons a {
-            font-size: 32px; 
+            color: #333;
+            font-size: 2em;
             margin: 0 15px;
-            color: #303030;
             transition: color 0.3s;
         }
         .social-icons a:hover {
-            color: #1E8449;
-        }
-        .content-section {
-            background-color: #FFFFFF;
-            padding: 30px 20px;
-            border-radius: 10px;
-            margin-bottom: 30px;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-        }
-        audio {
-            width: 80%;
-            margin-top: 15px;
-        }
-        .gallery, .products-grid {
-            display: flex;
-            flex-wrap: wrap; 
-            justify-content: center;
-            gap: 25px; 
-            margin-top: 25px;
-        }
-        .image-item, .product-item {
-            background-color: #f9f9f9;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            width: 280px;
-            text-align: center;
-        }
-        .product-item a {
-            display: block;
-            background-color: #1E8449;
-            color: white;
-            padding: 10px 15px;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 15px;
-            font-weight: bold;
-            transition: background-color 0.3s;
-        }
-        .product-item a:hover {
-            background-color: #156535;
-        }
-        
-        .footer {
-            background-color: #C3C7A8; 
-            color: #303030;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            color: #007bff;
         }
     </style>
 </head>
 <body>
-    
+
     <div class="container">
-        <div class="header">
-            
-            <nav class="nav-link">
-                <a href="index.html" style="color: #1E8449; text-decoration: none;">العودة إلى الصفحة الرئيسية</a>
-            </nav>
-            
-            <h1>بسم الله الرحمن الرحيم</h1>
-            
-            <p class="quran-text">
-                ﴿وَقُلِ اعمَلوا فَسَيَرَى اللَّهُ عَمَلَكُم وَرَسولُهُ وَالمُؤمِنونَ﴾
-            </p>
-        </div>
+        <p class="bismillah">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</p>
 
-        <div class="profile-section">
-            <h2>أهلاً وسهلاً بك في صفحتي الشخصية!</h2>
-            
-            <p class="dedication">**إهداء خاص إلى عمر.**</p>
-            
-            <img src="Downloadfile.jpeg" alt="صورتي الشخصية" class="profile-image">
-            
-            <p>مرحباً بكم. هذه نبذة بسيطة عني وعن بعض الملفات.</p>
-            
-            <div class="social-icons">
-                <a href="#" target="_blank" title="فيسبوك"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" target="_blank" title="إنستغرام"><i class="fab fa-instagram"></i></a>
-                <a href="#" target="_blank" title="يوتيوب"><i class="fab fa-youtube"></i></a>
-            </div>
-        </div>
+        <h1>التقديم الصوتي الصحفي</h1>
+
+        <img src="/tea-drinking-reporter.jpeg" alt="صورة الصحفي وهو يشرب الشاي" class="profile-img">
+
+        <h2>ملف التقديم الصوتي</h2>
+
+        <audio controls>
+            <source src="/audio-report.mp3" type="audio/mpeg">
+            <p>المتصفح لا يدعم تشغيل الملف الصوتي. يرجى التحديث.</p>
+        </audio>
         
-        <div class="content-section">
-            <h3>تشغيل الملف الصوتي</h3>
-            <audio controls>
-                <source src="Sound.m4a" type="audio/mp4">
-                متصفحك لا يدعم وسم الصوت.
-            </audio>
-        </div>
+        <p>استمع للتقرير الصوتي الكامل أعلاه.</p>
 
-        <div class="content-section">
-            <h2>معرض الصور</h2>
-            <div class="gallery">
-                <div class="image-item">
-                    <h3>صورة رقم 1</h3>
-                    <img src="599b15b4-a0f1-4378-a7f3-0366fc481be0.jpg" alt="صورة عشوائية" style="max-width:100%; height:auto; border-radius: 5px;">
-                    <p>ملف JPG</p>
-                </div>
-                <div class="image-item">
-                    <h3>صورة رقم 2</h3>
-                    <img src="IMG_20230810_215658_063.webp" alt="صورة بتاريخ 10 أغسطس 2023" style="max-width:100%; height:auto; border-radius: 5px;">
-                    <p>ملف WebP</p>
-                </div>
-                <div class="image-item">
-                    <h3>صورة رقم 3</h3>
-                    <img src="FotorCreated-001.jpg" alt="صورة تم إنشاؤها بـ Fotor" style="max-width:100%; height:auto; border-radius: 5px;">
-                    <p>ملف JPG</p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="products-section content-section">
-            <h2>المنتجات المُرشَّحة لك</h2>
-            <div class="products-grid">
-                
-                <div class="product-item">
-                    <img src="product1.jpg" alt="اسم المنتج الأول" style="max-width:100%; height:auto; border-radius: 5px;">
-                    <h4>المنتج الأول المميز</h4>
-                    <p>وصف مختصر للمنتج.</p>
-                    <a href="#" target="_blank">اطلب الآن</a>
-                </div>
-                
-                <div class="product-item">
-                    <img src="product2.jpg" alt="اسم المنتج الثاني" style="max-width:100%; height:auto; border-radius: 5px;">
-                    <h4>المنتج الثاني الأكثر مبيعاً</h4>
-                    <p>ميزات وخصائص هذا المنتج.</p>
-                    <a href="#" target="_blank">شراء</a>
-                </div>
-                
-                <div class="product-item">
-                    <img src="product3.jpg" alt="اسم المنتج الثالث" style="max-width:100%; height:auto; border-radius: 5px;">
-                    <h4>منتج جديد ومبتكر</h4>
-                    <p>تفاصيل إضافية عن المنتج.</p>
-                    <a href="#" target="_blank">التفاصيل</a>
-                </div>
+        <hr>
 
-            </div>
+        <h2>تواصل معي</h2>
+        <div class="social-icons">
+            <a href="tel:123456789" title="الاتصال الهاتفي"><i class="fas fa-phone"></i></a>
+            
+            <a href="mailto:your@email.com" title="البريد الإلكتروني"><i class="fas fa-envelope"></i></a>
+            
+            <a href="#" title="تويتر"><i class="fab fa-twitter"></i></a>
+
+            <a href="#" title="فيسبوك"><i class="fab fa-facebook"></i></a>
         </div>
-    </div>
-    
-    <div class="footer">
-        <p>&copy; 2023 كل الحقوق محفوظة.</p>
+        <br>
     </div>
 
 </body>
